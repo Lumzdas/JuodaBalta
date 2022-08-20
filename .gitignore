@@ -1,3 +1,8 @@
 cmake-*
 CMakeSettings.json
 .idea
+
+conan/conanbuildinfo.cmake
+conan/conanbuildinfo.txt
+conan/conaninfo.txt
+conan/graph_info.json
