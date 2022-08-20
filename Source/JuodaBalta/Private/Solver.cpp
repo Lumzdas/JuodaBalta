@@ -38,7 +38,7 @@ namespace JuodaBalta {
 
 	FMove FSolver::BestMoveInner() {
 		FMove BestMoveMemo;
-		i32 Alpha = INT16_MIN;
+		i32 Alpha = INT32_MIN;
 
 		FBoards Boards;
 		Boards.reserve(32 * sizeof(FBoard));
@@ -49,7 +49,7 @@ namespace JuodaBalta {
 			NodeVisits++;
 			#endif
 
-			i32 const Score = ABMin(LegalBoard, Alpha, INT16_MAX, 2);
+			i32 const Score = ABMin(LegalBoard, Alpha, INT32_MAX, 2);
 			FMove const Move = LegalBoard.ToMove(StartingBoard);
 
 			if (Score > Alpha) {
